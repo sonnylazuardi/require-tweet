@@ -1,0 +1,29 @@
+{
+  "name": "require-tweet",
+  "version": "0.1.0",
+  "description": "require a node js module from a tweet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonnylazuardi/require-tweet.git"
+  },
+  "keywords": [
+    "require",
+    "tweet",
+    "node",
+    "js"
+  ],
+  "author": "sonnylazuardi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sonnylazuardi/require-tweet/issues"
+  },
+  "homepage": "https://github.com/sonnylazuardi/require-tweet#readme",
+  "dependencies": {
+    "bluebird": "^3.3.4",
+    "twitter": "^1.2.5"
+  }
+}
