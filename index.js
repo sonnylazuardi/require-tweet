@@ -7,14 +7,14 @@ var consumer_secret = process.env.REQUIRE_TWEET_CONSUMER_SECRET || 'AgPnR8EVZHIT
 var access_token_key = process.env.REQUIRE_TWEET_ACCESS_TOKEN_KEY || '59897483-e5IMrcXTHwPKuW0G2D1dIwwrOJ55QNEKMj3otkRsc';
 var access_token_secret = process.env.REQUIRE_TWEET_ACCESS_TOKEN_SECRET || '5vlFvnoWhlNQV0wJ7UvKZWl544D2oA4eVpOx64XODvpWh';
 
-var requireTweet = function(tweet_id) {
+var client = new Twitter({
+    consumer_key: consumer_key,
+    consumer_secret: consumer_secret,
+    access_token_key: access_token_key,
+    access_token_secret: access_token_secret
+});
 
-    var client = new Twitter({
-        consumer_key: consumer_key,
-        consumer_secret: consumer_secret,
-        access_token_key: access_token_key,
-        access_token_secret: access_token_secret
-    });
+var requireTweet = function(tweet_id) {
 
     return new Promise(function (resolve, reject) {
         client.get('statuses/show', {
