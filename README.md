@@ -13,7 +13,7 @@ and in your index.js file
 * function leftpad(str,len,ch){str=String(str);var i=-1;if(!ch && ch !== 0)ch= ' ';len=len-str.length;while (++i<len){str=ch+str;}return str;}
 */
 
-var leftPad = require('require-tweet')('712414574658588672');
+var leftPad = require('require-tweet')('https://twitter.com/the_kenny/status/712414574658588672');
 
 leftPad.then(function (leftPad) {
     console.log(leftPad('foo', 5));

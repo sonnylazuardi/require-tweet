@@ -1,5 +1,11 @@
-var leftPad = require('./index')('712414574658588672');
+var leftPadFromId = require('./index')('712414574658588672');
 
-leftPad.then(function (leftPad) {
+leftPadFromId.then(function (leftPad) {
+    console.log(leftPad('foo', 5));
+});
+
+var leftPadFromUrl = require('./index')('https://twitter.com/the_kenny/status/712414574658588672');
+
+leftPadFromUrl.then(function (leftPad) {
     console.log(leftPad('foo', 5));
 });
